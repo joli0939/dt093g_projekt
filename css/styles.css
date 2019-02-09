@@ -1,0 +1,1078 @@
+
+/*********************************************
+ * 
+ * Skapat av Joel Lindberg (joli0939)
+ * 
+ ********************************************/
+
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+html {
+    padding-top: 0.5%;
+}
+
+html {
+    background: linear-gradient(#E88C0C, #fcaa38);
+}
+
+
+
+/* Bestämmer font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chivo', sans-serif;
+}
+
+p, label, span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* CSS för mobil */
+@media screen and (max-width: 499px) {
+
+    body {
+        width: 97%;
+        margin: auto;
+        border: 1px solid #888;
+        border-radius: 5px;
+        background: #f9f9f9;
+        padding: 1%;
+    }
+
+
+    /* Utseende för rubriker och länkar */
+    h1 {    
+        font-size: 1.4em;
+        font-weight: 900;
+        text-align: center;
+        color:#7e0d0d;
+        margin-bottom: 1%;
+        margin-left: 1%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        font-weight: 900;
+        color:#7e0d0d;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 1%;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 1%;
+    }
+
+    h5 {
+        font-size: 0.9em;
+        background: #7e0d0d;
+        text-align: center;
+        color: #fff;
+        display: block;
+        width: 96%;
+        padding: 2%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 5%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #7e0d0d;
+    }
+
+
+    /* Huvudmeny */
+    .dropdown {
+        background: #7e0d0d;
+        text-align: center;
+        color: #fff;
+        display: block;
+        width: 96%;
+        padding: 2%;
+        border-radius: 5px;
+        font-size: 0.9em;
+    }
+
+    .dropdown:hover ul {
+        display: block;
+        position: absolute;
+    }
+
+    .mainMenu ul {
+        display: none;
+        width: 93%;
+        border-radius: 5px;
+    }
+
+    .mainMenuUL {
+        list-style-type: none;
+        background: #7e0d0d;
+    }
+
+    .mainMenuUL li {
+        width: 100%;    
+    
+        border-top: 1px solid #fff;
+    }
+
+    .mainMenuUL a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        padding: 4%;
+        width: 91%;        
+    }
+
+    .mainMenuUL a:hover {
+        background: #fff;
+        color: #7e0d0d;
+    }
+
+    .loggedInAs {
+        text-align: center;
+        color: #7e0d0d;
+        font-size: 0.7em;
+    }
+
+
+    /* Användarlista */
+    .holdUsers {
+        display: none;
+        position: absolute;
+        background: #f9f9f9;
+        width: 97%;
+        text-align: center;    
+    }
+
+    #allUsers:hover .holdUsers {
+        display: block;  
+    }
+
+
+    /* Utseende för bloggposter */
+    .blogPost:nth-of-type(2n+1) {
+        background: #ccc;
+        border-top: 1px solid #888;
+        border-bottom: 1px solid #888;
+        
+    }
+
+    .blogPost {
+        width: 90%;
+        padding: 5%;    
+    }
+
+    .blogPost:first-of-type {
+        margin-top: 3%;
+    }
+    .blogDate {
+        font-size: 0.8em;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 1%;
+    }
+
+    .blogText {
+        margin-bottom: 3%;
+        color: #222;
+    }
+
+    .blogUser {
+        font-weight: bold;
+    }
+
+    .writtenBy {
+        display: inline;
+        font-style: italic;
+        color: #444;
+    }
+
+
+    /* Skapa ny användare */
+    .createUserContainer {
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .createUserTxt {
+        margin-bottom: 5%;
+        width: 100%;
+        height: 25px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #333;
+    }
+
+    .createUserLabel {
+        color: #222;
+    }
+
+    .createMessage {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+
+    /* Inloggning */
+    #username, #password {
+        margin-bottom: 5%;
+        width: 97%;
+        height: 25px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #333;
+    }
+
+    .loginContainer {
+        margin-top: 5%;
+    }
+
+    .createUserLink {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+
+    /* Skriva nytt inlägg */
+    #writePost {
+        margin-top: 5%;
+        width: 98%;
+    }
+
+    #writePost p {
+        text-align: center;
+        font-weight: bold;
+        color: #7e0d0d;
+        margin-bottom: 2%;
+    }
+
+    #writePost label {
+        font-weight: bold;
+    }
+
+    #writePost textarea {
+        width: 98%;
+        height: 300px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+
+    #addHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 98%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+
+    /* Ändra inlägg */
+    #updateForm label {
+        font-weight: bold;
+    }
+    #updatePost {
+        width: 98%;
+        height: 300px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+
+    #updateHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 98%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+    .returnLink {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+    }
+    
+
+    /* Knappar */
+    .button {
+        display: block;
+        background: #7e0d0d;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 12pt;
+        margin: auto;
+    }
+
+
+    /* Meddelanden */
+    .loginMessage, .messageOut {
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+
+    /* Sida med användares egna inlägg */
+    .editLink {
+        margin-right: 10%;
+    }
+
+    
+    /* Sidfot */
+    footer {
+        background: #7e0d0d;
+        color: #fff;
+        height: 50px;
+        text-align: center;
+        padding-top: 40px;
+        margin-top: 2%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; 
+    }
+
+
+    /* Fast sidfot */
+    #container {
+        min-height: calc(100vh - 70px);
+        margin-left: 1%;
+        overflow: hidden;
+    }
+
+
+}
+
+
+/* CSS för surfplatta */
+@media screen and (min-width: 500px) and (max-width: 799px) {
+
+    body {
+        width: 96%;
+        margin: auto;
+        border: 1px solid #888;
+        border-radius: 10px;
+        background: #f9f9f9;
+
+    }
+
+
+    /* Utseende för rubriker och länkar */
+    h1 {    
+        font-size: 1.7em;
+        font-weight: 900;
+        color:#7e0d0d;
+        margin-bottom: 1%;
+        margin-left: 1%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        font-weight: 900;
+        color:#7e0d0d;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 1%;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 1%;
+    }
+
+    h5 {
+        font-size: 0.9em;
+        background: #7e0d0d;
+        text-align: center;
+        color: #fff;
+        display: block;
+        width: 50%;
+        margin: auto;
+        padding: 2%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 5%;
+    }
+
+    h5:hover {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: #7e0d0d;
+    }
+
+    /* Sidhuvud */
+    #pageHeader {
+        height: 150px;
+        background-image: url("../images/header.jpg");
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    /* Huvudmeny */
+    .mainMenu {
+        margin-top: 78px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #7e0d0d;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        font-weight: normal;
+        transition: text-shadow 0.5s;
+    }
+
+    nav li a:hover {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+        color: white;
+    }
+
+    .loginButton {
+        float: right;
+    }
+
+    .loggedInAs {
+        text-align: right;
+        padding-right: 10px;
+        font-size: 0.8em;
+        color: #7e0d0d;
+    }
+
+    .dropdown-span {
+        display: none;
+    }
+
+
+    /* Användarlista */
+    .holdUsers {
+        display: none;
+        position: absolute;
+        background: #f9f9f9;
+        width: 94%;
+        text-align: center;  
+        border: 1px solid #222;  
+    }
+
+    .holdUsers a {
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+
+    #allUsers:hover .holdUsers {
+        display: block;  
+    }
+
+
+    /* Utseende för bloggposter */
+    .blogPost {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        border: 1px solid #888;
+        padding: 1%;
+        border-radius: 20px;
+        background: #eee;
+    }
+
+    .blogDate {
+        font-size: 0.8em;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 1%;
+    }
+
+    .blogText {
+        margin-bottom: 3%;
+        color: #222;
+    }
+
+    .blogUser {
+        font-weight: bold;
+    }
+
+    .writtenBy {
+        display: inline;
+        font-style: italic;
+        color: #444;
+    }
+
+
+    /* Skapa ny användare */
+    .createUserContainer {
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .createUserTxt {
+        margin-bottom: 5%;
+        width: 100%;
+        height: 25px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #333;
+    }
+
+    .createUserLabel {
+        color: #222;
+    }
+
+    .createMessage {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+
+    /* Inloggning */
+    #username, #password {
+        margin-bottom: 5%;
+        width: 100%;
+        height: 25px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #333;
+    }
+
+    .loginContainer {
+        margin-top: 5%;
+        width: 60%;
+        margin: auto;
+    }
+
+    .createUserLink {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+
+    /* Formulär för att skriva nytt inlägg */
+    #writePost {
+        margin-top: 5%;
+        margin:auto;
+        width: 90%;
+    }
+
+    #writePost p {
+        font-weight: bold;
+        color: #7e0d0d;
+        margin-bottom: 2%;
+    }
+
+    #writePost label {
+        font-weight: bold;
+    }
+
+    #writePost textarea {
+        width: 100%;
+        height: 400px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 1%;
+    }
+
+    #addHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 100%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+
+    /* Formulär för att ändra inlägg */
+    #updateForm {
+        margin-top: 5%;
+        margin: auto;
+        width: 70%;
+    }
+
+    #updateForm p {
+        font-weight: bold;
+        color: #7e0d0d;
+        margin-bottom: 2%;
+    }
+
+    #updateForm label {
+        font-weight: bold;
+    }
+
+    #updateForm textarea {
+        width: 100%;
+        height: 400px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 2%;
+    }
+
+    .returnLink {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    #updateHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 100%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+
+    /* Knappar */
+    .button {
+        display: block;
+        background: #7e0d0d;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 12pt;
+        margin: auto;
+    }
+
+
+    /* Meddelanden */
+    .loginMessage, .messageOut {
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+
+    /* Sida med användares egna inlägg */
+    .editLink {
+        margin-right: 10%;
+    }
+
+    
+    /* Sidfot */
+    footer {
+        background: #7e0d0d;
+        color: #fff;
+        height: 50px;
+        text-align: center;
+        padding-top: 40px;
+        margin-top: 2%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; 
+    }
+
+
+    /* Fast sidfot */
+    #container {
+        min-height: calc(100vh - 70px);
+        margin-left: 1%;
+        overflow: hidden;
+    }
+}
+
+
+/* CSS för desktop */
+@media screen and (min-width: 800px) {
+
+    body {
+        width: 1150px;
+        margin: auto;
+        border: 1px solid #888;
+        border-radius: 20px;
+        background: #f9f9f9;
+    }
+
+
+    /* Utseende för rubriker och länkar */
+    h1 {    
+        font-size: 3em;
+        font-weight: 900;
+        color:#7e0d0d;
+        margin-left: 1%;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 900;
+        color:#7e0d0d;
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 1%;
+    }
+
+    h5 {
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #7e0d0d;
+        transition: color 0.5s;
+    }
+
+    a:hover {
+        color: #E88C0C;
+    }
+
+
+    /* Sidhuvud */
+    #pageHeader {
+        height: 254px;
+        background-image: url("../images/header.jpg");
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+
+    /* Huvudmeny */
+    .mainMenu {
+        margin-top: 148px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #7e0d0d;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-weight: normal;
+        transition: text-shadow 0.5s;
+    }
+
+    nav li a:hover {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+        color: white;
+    }
+
+    .loginButton {
+        float: right;
+    }
+
+    .loggedInAs {
+        text-align: right;
+        padding-right: 10px;
+        font-size: 0.8em;
+        color: #7e0d0d;
+    }
+
+    .dropdown-span {
+        display: none;
+    }
+
+
+    /* Container div */
+    #container {
+        min-height: calc(100vh - 70px);
+        margin-left: 1%;
+        overflow: hidden;
+    }
+
+    #allUsers {
+        float: left;
+        border-right: 1px solid #888;
+        width: 12%;
+        vertical-align: top;
+        min-height: 500px;
+    }
+
+
+    /* Utseende för bloggposter */
+    .blogPost {
+        width: 65%;
+        margin: auto;
+        margin-top: 5%;
+        border: 1px solid #888;
+        padding: 1%;
+        border-radius: 20px;
+        background: #eee;
+    }
+
+    .blogDate {
+        font-size: 0.8em;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 1%;
+    }
+
+    .blogText {
+        margin-bottom: 3%;
+        color: #222;
+    }
+
+    .blogUser {
+        font-weight: bold;
+    }
+
+    .writtenBy {
+        display: inline;
+        font-style: italic;
+        color: #444;
+    }
+
+    .editLink {
+        margin-right: 2%;
+    }
+
+
+    /* Formulär för att skriva nytt inlägg */
+    #writePost {
+        margin-top: 5%;
+        margin-left: 2%;
+        width: 70%;
+    }
+
+    #writePost p {
+        font-weight: bold;
+        color: #7e0d0d;
+        margin-bottom: 2%;
+    }
+
+    #writePost label {
+        font-weight: bold;
+    }
+
+    #writePost textarea {
+        width: 80%;
+        height: 400px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 1%;
+    }
+
+    #addHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 80%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+
+    /* Formulär för att ändra inlägg */
+    #updateForm {
+        margin-top: 5%;
+        margin-left: 2%;
+        width: 70%;
+    }
+
+    #updateForm p {
+        font-weight: bold;
+        color: #7e0d0d;
+        margin-bottom: 2%;
+    }
+
+    #updateForm label {
+        font-weight: bold;
+    }
+
+    #updateForm textarea {
+        width: 80%;
+        height: 400px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        margin-top: 2%;
+    }
+
+    .returnLink {
+        display: inline-block;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+    #updateHeader {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        width: 80%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #888;
+        font-weight: bold;
+    }
+
+
+    /* Inloggningssida */
+    .loginContainer {
+        width: 180px;
+        margin: auto;
+        margin-top: 10%;
+        padding: 1%;
+        border: 1px solid #888;
+        border-radius: 5px;
+    }
+
+    .loginContainer:hover {
+        border: 1px solid #333;
+    }
+
+    #login input {
+        margin-bottom: 5%;
+    }
+
+    #login label {
+        color: #222;
+    }
+
+    .createUserLink {
+        display: block;
+        font-size: 1.1em;
+        text-decoration: underline;
+        margin-top: 10%;
+    }
+
+    .loginMessage {
+        color: red;
+    }
+
+
+    /* Skapa ny användare */
+    .createUserContainer {
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .createUserTxt {
+        margin-bottom: 5%;
+        width: 100%;
+        height: 25px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #333;
+    }
+
+    .createUserLabel {
+        color: #222;
+    }
+
+    .createMessage {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+
+    /* Knappar */
+    .button {
+        background: #7e0d0d;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 12pt;
+        transition: background 0.5s;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        background: #bd1919;
+    }
+
+
+    /* Meddelande */
+    .messageOut {
+        text-align: center;
+        margin-top: 3%;
+        font-weight: bold;
+    }
+
+
+    /* Sidfot */
+    footer {
+        background: #7e0d0d;
+        color: #fff;
+        height: 50px;
+        text-align: center;
+        padding-top: 40px;
+        margin-top: 2%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; 
+    }
+}
